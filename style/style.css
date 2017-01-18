@@ -1,0 +1,1721 @@
+/*
+=================================
+	ALGEMEEN
+=================================
+*/
+
+* {
+	-webkit-font-smoothing: antialiased;
+}
+
+html {
+	background: #F0F0F0;
+}
+
+body {
+	background: #F7F7F7;
+	margin: 0;
+}
+
+h2 {
+	font-family: "nexa_heavy";
+	font-size: 2.375em;
+}
+
+h3 {
+	font-family: "nexa_book";
+	font-size: 1.5em;
+	font-weight: normal;	
+}
+
+p {
+	font-family: "nexa_book";
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+.hide {
+	display: none !important;
+}
+
+/*
+=================================
+	FONTS
+=================================
+*/
+
+@font-face {
+	font-family: "nexa_book";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/nexa_book-webfont.woff2") format("woff2"),
+	url("../fonts/nexa_book-webfont.woff") format("woff");
+}
+
+@font-face {
+	font-family: "nexa_xbold";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/nexa_xbold-webfont.woff2") format("woff2"),
+	url("../fonts/nexa_xbold-webfont.woff") format("woff");
+}
+
+@font-face {
+	font-family: "nexa_black";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/nexa_black-webfont.woff2") format("woff2"),
+	url("../fonts/nexa_black-webfont.woff") format("woff");
+}
+
+@font-face {
+	font-family: "nexa_heavy";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/nexa_heavy-webfont.woff2") format("woff2"),
+	url("../fonts/nexa_heavy-webfont.woff") format("woff");
+}
+
+@font-face {
+	font-family: "nexa_regular";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/nexa_regular-webfont.woff2") format("woff2"),
+	url("../fonts/nexa_regular-webfont.woff") format("woff");
+}
+
+@font-face {
+	font-family: "nexa_bold";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/nexa_bold-webfont.woff2") format("woff2"),
+	url("../fonts/nexa_bold-webfont.woff") format("woff");
+}
+
+@font-face {
+	font-family: "nexa_light";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/nexa_light-webfont.woff2") format("woff2"),
+	url("../fonts/nexa_light-webfont.woff") format("woff");
+}
+
+/*
+=================================
+	NAVBAR
+=================================
+*/
+
+.navhome {
+	background: #FFFFFF;
+	box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,0.2);
+	box-sizing: border-box;
+	height: 4.375rem;
+	width: 100vw;
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	z-index: 3;
+}
+
+.navhome > div:first-of-type {
+	width: 60rem;
+	max-width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navhome a div {
+	background: url(../images/transavia_logo.svg);
+	background-repeat: no-repeat;
+	background-position: 0 center;
+	height: 2rem;
+	margin: 1.1875rem 0 1.1875rem 0;
+	width: 10.8125rem;
+	cursor: pointer;
+}
+
+.navhome a {
+	color: #00D66C;
+	text-decoration: none;
+	transition: color 300ms;
+}
+
+.navhome a:hover {
+	color: #2800A0;
+}
+
+.navhome ul {
+	align-self: flex-end;
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	margin: 1.3rem 0 1.3rem auto;
+	padding: 0;
+}
+
+.navhome li {
+	float: left;
+	font-family: "nexa_bold";
+	font-size: 1.25em;
+}
+
+.navhome li:nth-child(1n+2) {
+	margin-left: 3rem;
+}
+
+.navhome li:nth-child(1):before {
+	content: " ";
+	float: left;
+	background: url(../images/home_icon.svg) center no-repeat;
+	width: 1.250rem;
+	height: 1.250rem;
+	margin: 0.07rem 0.8rem 0 0;
+}
+
+.navhome li:nth-child(2):before {
+	content: " ";
+	float: left;
+	background: url(../images/profiel_icon.svg) center no-repeat;
+	width: 1.250rem;
+	height: 1.250rem;
+	margin: 0.07rem 0.8rem 0 0;
+}
+
+.navhome > div:first-of-type > div:nth-of-type(1) {
+	background: url(../images/menu.svg) center no-repeat;
+	width: 3.125rem;
+	height: 3.125rem;
+	display: none;
+	cursor: pointer;
+}
+
+.navhome > div:first-of-type > p {
+	font-family: "nexa_bold";
+	font-size: 1.25em;
+	color: #00D66C;
+	display: none;
+}
+
+.navhome > div:first-of-type > div:nth-of-type(2) {
+	background: url(../images/menu_search.svg) center no-repeat;
+	width: 3.125rem;
+	height: 3.125rem;
+	display: none;
+	cursor: pointer;
+}
+
+.mobileClose {
+	background: url(../images/menu_search_close.svg) center no-repeat !important;
+}
+
+.geenZoekenMobiel {
+	background: none !important;
+	cursor: auto !important;
+}
+
+/*
+=================================
+	NAV - INGELOGD
+=================================
+*/
+
+.ingelogd li:nth-child(2):before {
+	background: url(../images/lijst_icon.svg) center no-repeat;
+}
+
+.ingelogd li:nth-child(3):before {
+	content: " ";
+	float: left;
+	background: url(../images/profiel_icon.svg) center no-repeat;
+	width: 1.250rem;
+	height: 1.250rem;
+	margin: 0.07rem 0.8rem 0 0;
+}
+
+/*
+=================================
+	NAV - MOBIEL
+=================================
+*/
+
+.navmobielhome {
+	width: 100vw;
+	height: 100vh;
+	background: #F7F7F7;
+	position: fixed;
+	z-index: 2;
+	display: none;
+}
+
+.navUitklappenMobiel {
+	display: block;
+}
+
+.navmobielhome a {
+	color: #00D66C;
+	text-decoration: none;
+	transition: color 300ms;
+}
+
+.navmobielhome ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.navmobielhome li {
+	font-family: "nexa_bold";
+	font-size: 1.25em;
+	padding: 2rem 0 0 1rem;
+}
+
+.navmobielhome li:nth-child(1):before {
+	content: " ";
+	float: left;
+	background: url(../images/home_icon.svg) center no-repeat;
+	width: 1.250rem;
+	height: 1.250rem;
+	margin: 0.07rem 2rem 0 0;
+}
+
+.navmobielhome li:nth-child(2):before {
+	content: " ";
+	float: left;
+	background: url(../images/profiel_icon.svg) center no-repeat;
+	width: 1.250rem;
+	height: 1.250rem;
+	margin: 0.07rem 2rem 0 0;
+}
+
+.ingelogdmobiel li:nth-child(2):before {
+	content: " ";
+	float: left;
+	background: url(../images/lijst_icon.svg) center no-repeat;
+	width: 1.250rem;
+	height: 1.250rem;
+	margin: 0.07rem 2rem 0 0;
+}
+
+.ingelogdmobiel li:nth-child(3):before {
+	content: " ";
+	float: left;
+	background: url(../images/profiel_icon.svg) center no-repeat;
+	width: 1.250rem;
+	height: 1.250rem;
+	margin: 0.07rem 2rem 0 0;
+}
+
+/*
+=================================
+	NAV - MOBIEL - INGELOGD
+=================================
+*/
+
+.navaanmelden li:nth-child(2):before {
+	content: " ";
+	float: left;
+	background: url(../images/lijst_icon.svg) center no-repeat;
+	width: 1.250rem;
+	height: 1.250rem;
+	margin: 0.07rem 0.8rem 0 0;
+}
+
+.navaanmelden li:nth-child(2):before {
+	content: " ";
+	float: left;
+	background: url(../images/profiel_icon.svg) center no-repeat;
+	width: 1.250rem;
+	height: 1.250rem;
+	margin: 0.07rem 0.8rem 0 0;
+}
+
+.navmobielhome li:nth-child(3):before {
+	content: " ";
+	float: left;
+	background: url(../images/profiel_icon.svg) center no-repeat !important;
+	width: 1.250rem;
+	height: 1.250rem;
+	margin: 0.07rem 2rem 0 0;
+}
+
+/*
+=================================
+	HEADER - HOME
+=================================
+*/
+
+.headerhome {
+	width: 100vw;
+	height: 25rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 4.375rem;
+	background: url(../images/map.svg) 100% center no-repeat, #00D66C;
+}
+
+.headerhome > div:first-child {
+	align-items: center;
+	width: 100%;
+	max-width: 60rem;
+}
+
+.headerhome h1 {
+	color: #FFFFFF;
+	font-family: "nexa_bold";
+	font-size: 3em;
+	margin: 0 0 0.9rem 0;
+	text-shadow: 0 0 0.8rem #00D66C, 0 0 0.8rem #00D66C, 0 0 0.8rem #00D66C;
+}
+
+.headerhome p {
+	font-size: 1.125em;
+	cursor: pointer;
+	float: left;
+	word-spacing: 0.1rem;
+	transition: color 300ms;
+	text-shadow: 0 0 0.8rem #00D66C, 0 0 0.8rem #00D66C, 0 0 0.8rem #00D66C, 0 0 0.8rem #00D66C, 0 0 0.8rem #00D66C, 0 0 0.8rem #00D66C;
+}
+
+.headerhome p:hover {
+	color: #2800A0;
+}
+
+.headerhome p:after {
+	content: " ";
+	float: right;
+	width: 1.5rem;
+	height: 1.250rem;
+	background: url(../images/uitgebreid_zoeken_pijl.svg) no-repeat;
+	background-position: center -20%;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.uitgebreidzoeken:after {
+	-webkit-transform: rotate(0deg) !important;
+	-moz-transform: rotate(0deg) !important;
+	-ms-transform: rotate(0deg) !important;
+	-o-transform: rotate(0deg) !important;
+	transform: rotate(0deg) !important;
+	content: " verbergen" !important;
+	background-position: 100% 100% !important;
+	margin-left: 0.3rem !important;
+	padding-right: 5.5rem !important;
+}
+
+/*
+=================================
+	HEADER - ZOEKBALK
+=================================
+*/
+
+.searchContainer {
+	max-width: 60rem;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+}
+
+#searchBar {
+	overflow: hidden; /* Zodat de scrollbar weg is */
+	height: 3.125rem;
+	display: flex;
+	align-items: center;
+	background: #FFFFFF;
+	border-radius: 1.563rem;
+	flex-grow: 1;
+	box-shadow: 0 0.625rem 0.625rem 0 rgba(0,0,0,0.13);
+}
+
+.searchBarUitklappenMobiel {
+	height: 3.125rem !important;
+}
+
+.searchBarFocus {
+	box-shadow: 0 0 0.5rem 0.1rem #4990E2, 0 0.625rem 0.625rem 0 rgba(0,0,0,0.13) !important;
+}
+
+.searchIcon {
+	width: 2.5rem;
+	min-width: 2.5rem;
+	max-width: 2.5rem;
+	height: 3.125rem;
+	background: url(../images/search_icon.svg) 80% center no-repeat;
+	flex-grow: 0;
+}
+
+#searchQueryContainer {
+	display: flex;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	height: 3.125rem;
+	padding: 1.563rem 0.313rem 1.563rem 0; /* Zodat de scrollbar weg is */
+	flex-grow: 0;
+	max-width: 53.75rem;
+}
+
+#searchBar span { /* tags */
+	height: 1.875rem;
+	background-color: yellow;
+	padding: 0.05rem 0.4rem 0 1rem;
+	border-radius: 0.938rem;
+	display: flex;
+	align-items: center;
+	margin: 0.625rem 0 0 0.625rem;
+	text-transform: lowercase;
+	transition: transform 500ms, background 500ms;
+	cursor: pointer;
+	font-family: "nexa_bold";
+	font-size: 1.125em;
+	color: #FFFFFF;
+	flex-shrink: 0;
+}
+
+#searchBar span:hover {
+	background: #000000 !important;
+}
+
+#searchBar span:after {
+	content: " ";
+	float: right;
+	height: 1.875rem;
+	width: 1.875rem;
+	background: url(../images/search_tag_close_icon.svg) center no-repeat;
+}
+
+#searchBar span:nth-child(3n+1) {
+	background: #00D66C;
+}
+
+#searchBar span:nth-child(3n+2) {
+	background: #2800A0;
+}
+
+#searchBar span:nth-child(3n+3) {
+	background: #FF3268;
+}
+
+.tagCopy {
+	-ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari */
+    transform: scale(1.1);
+	background-color: #000000 !important;
+	transition: transform 500ms;
+}
+
+#searchInput {
+	height: 3.125rem;
+	width: 6.250rem;
+	border: none;
+	padding-left: 0.625rem;
+	display: inline-block;
+	flex-grow: 1;
+	font-family: "nexa_bold";
+	font-size: 1.125em;
+	color: #000000;
+	padding-top: 0.2rem;
+}
+
+#searchInput::-webkit-search-cancel-button{
+	display: none;
+}
+
+#searchInput:focus, #searchSubmit:focus {
+	outline: none;
+}
+
+#searchSubmit {
+	width: 12rem;
+	min-width: 12rem;
+	box-sizing: border-box;
+	height: 3.125rem;
+	border: none;
+	border-radius: 1.563rem;
+	margin-left: 2rem;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	font-family: "nexa_bold";
+	font-size: 1.125em;
+	color: #FFFFFF;
+	background: #FF3268;
+	box-shadow: 0 0.625rem 0.625rem 0 rgba(0,0,0,0.13);
+	transition: box-shadow 300ms;
+}
+
+.searchSubmitUitklappenMobiel {
+	bottom: 1rem !important;
+}
+
+#searchSubmit:focus {
+	box-shadow: 0 0 0.5rem 0.1rem #4990E2, 0 0.625rem 0.625rem 0 rgba(0,0,0,0.13) !important;
+}
+
+#searchSubmit:hover {
+	box-shadow: 0 0.625rem 0.625rem 0 rgba(0,0,0,0.13), inset 0 -0.2rem 0.3rem 0 rgba(0,0,0,0.20);
+}
+
+#searchSubmit:active {
+	-ms-transform: translate(0, 0.125rem); /* IE 9 */
+    -webkit-transform: translate(0, 0.125rem); /* Safari */
+    transform: translate(0, 0.125rem);
+}
+
+#searchSubmit:before {
+	content: 'Zoeken';
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 1.250rem;
+	width: 9.375rem;
+	position: absolute;
+	top: 0.938rem;
+	left: 50%;
+	margin-left: -4.688rem;
+	transition: all 200ms ease;
+}
+
+#searchSubmit:after{
+	color: rgba(0,0,0,0);
+	height: 1.25rem;
+	width: 9.375rem;
+	content: '';
+	transition: all 200ms ease;
+	display: flex;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	top: 2.188rem;
+	left: 50%;
+	margin-left: -4.688rem;
+}
+
+.searchSubmitError:before{
+	top: -0.313rem !important;
+	color: rgba(0,0,0,0) !important;
+}
+
+.searchSubmitError:after{
+	top: 0.938rem !important;
+	color: #FFFFFF !important;
+	content: 'Geen termen' !important;
+}
+
+.searchSubmitSuccess:before{
+	top: -0.313rem !important;
+	color: rgba(0,0,0,0) !important;
+}
+
+.searchSubmitSuccess:after{
+	top: 0.938rem !important;
+	color: #FFFFFF !important;
+	content: 'Gelukt' !important;
+}
+
+/*
+=================================
+	HEADER - AANMELDEN
+=================================
+*/
+
+.headeraanmelden {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	margin-top: 4.375rem;
+	background: #EEDAC8;
+	padding: 3.125rem 0;
+}
+
+.headeraanmelden > div:first-child {
+	align-items: center;
+	width: 100%;
+	max-width: 60rem;
+	display: flex;
+}
+
+.headeraanmelden > div:first-child form {
+	background: #FFFFFF;
+	border-radius: 0.188rem;
+	box-shadow: 0 0.188rem 0.125rem 0 rgba(0,0,0,0.15);
+	width: 48%;
+	box-sizing: border-box;	
+	padding: 2rem;
+}
+
+.headeraanmelden > div:first-child form:nth-of-type(1) {
+	margin-bottom: auto;
+}
+
+.headeraanmelden > div:first-child form:nth-of-type(2) {
+	margin-left: auto;
+}
+
+.headeraanmelden > div:first-child form fieldset legend {
+	color: #FF3268;
+	font-family: "nexa_heavy";
+	font-size: 2.375em;
+	margin: 0 0 0.2rem 0;
+}
+
+.headeraanmelden > div:first-child form:nth-of-type(2) fieldset legend {
+	color: #00D66C;
+}
+
+.headeraanmelden > div:first-child form fieldset label {
+	font-family: "nexa_bold";
+	font-size: 1.125em;
+	margin: 1rem 0 0.5rem 0;
+	display: block;
+}
+
+.headeraanmelden > div:first-child form fieldset input {
+	display: block;
+	height: 1.875rem;
+	background: rgba(247,247,247,0.70);
+	border: 0.063rem solid rgba(208,206,214,0.50);
+	border-radius: 0.3125rem;
+	font-family: "nexa_book";
+	padding-left: 0.3125rem;
+	font-size: 1em;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.headeraanmelden > div:first-child form fieldset {
+	border: none;
+	padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.headeraanmelden > div:first-child form input[type=submit] {
+	align-self: flex-start;
+	width: auto;
+	height: 2.5rem;
+	font-family: "nexa_bold";
+	font-size: 1.125em;
+	border-radius: 1.5rem;
+	padding: 0 1rem;
+	background: #FF3268;
+	color: #fff;
+	border: none;
+	margin: 1.5rem 0 0 0;
+	cursor: pointer;
+	transition: box-shadow 300ms;
+}
+
+.headeraanmelden > div:first-child form input[type=submit]:hover {
+	box-shadow: inset 0 -0.2rem 0.3rem 0 rgba(0,0,0,0.20);
+}
+
+.headeraanmelden > div:first-child form:nth-of-type(2) input[type=submit] {
+	background: #00D66C;
+}
+
+.headeraanmelden > div:first-child form:nth-of-type(2) input[type=submit]:hover {
+	box-shadow: inset 0 -0.2rem 0.3rem 0 rgba(0,0,0,0.20);
+}
+
+/*
+=================================
+	FILTEREN
+=================================
+*/
+
+.suggestiebalk {
+	background: #FFFFFF;
+	display: flex;
+	max-height: 25rem;
+	justify-content: center;
+	width: 100vw;
+	overflow: hidden;
+	transition: max-height 200ms;
+}
+
+.suggestiebalkIngeklapt {
+	max-height: 0.001rem !important;
+}
+
+.suggestiebalkUitklappenMobiel {
+	height: 100vh !important;
+}
+
+.suggestiebalk form {
+	display: flex;
+	padding: 3.125rem 0;
+	width: 60rem;
+	flex-wrap: wrap;
+}
+
+.suggestiebalk fieldset {
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.suggestiebalk fieldset legend {
+	-webkit-padding-start: 0;
+	-webkit-padding-end: 0;
+	font-family: "nexa_bold";
+	font-size: 1.250em;
+	color: #00D66C;
+	margin-bottom: 0.3rem;
+}
+
+.suggestiebalk fieldset label {
+	display: block;
+	font-family: "nexa_regular";
+	font-size: 1em;
+	padding: 0.5rem 0;
+}
+
+.suggestiebalk fieldset label input[type="checkbox"] {
+	display: none;
+}
+
+.suggestiebalk fieldset label span {
+    display: inline-block;
+    width: 1.250rem;
+    height: 1.250rem;
+    background: #EEDAC8;
+    border-radius: 0.313rem;
+    float: right;
+}
+
+.suggestiebalk fieldset label input[type="checkbox"]:checked + span {
+    background: url("../images/checkbox_checked.svg") center no-repeat #EEDAC8;
+}
+
+.suggestiebalk fieldset label:hover input[type="checkbox"] + span {
+    background: url("../images/checkbox_checked_hover.svg") center no-repeat #EEDAC8;
+}
+
+.suggestiebalk fieldset label:hover input[type="checkbox"]:checked + span {
+    background: url("../images/checkbox_checked_close.svg") center no-repeat #EEDAC8;
+}
+
+.suggestiebalk fieldset:nth-child(1) {
+	width: 30%;
+}
+
+.suggestiebalk fieldset:nth-child(2) {
+	width: 30%;
+	margin: 0 5%;
+}
+
+.suggestiebalk fieldset:nth-child(2) legend {
+	color: #2800A0;
+}
+
+.suggestiebalk fieldset:nth-child(3) {
+	width: 30%;
+}
+
+.suggestiebalk fieldset:nth-child(3) legend {
+	color: #FF3268;
+}
+
+.suggestiebalk fieldset:nth-child(4) {
+	width: 65%;
+	margin: -6rem 0 0 auto;
+}
+	
+.suggestiebalk fieldset:nth-child(4) input {
+	width: 100%;
+}
+
+.suggestiebalk fieldset:nth-child(4) div {
+	display: flex;
+    justify-content: space-between;
+}
+
+.suggestiebalk fieldset:nth-child(4) div p {
+}
+
+.suggestiebalk fieldset:nth-child(4) div p:nth-child(2) {
+	margin-left: 8%;
+}
+
+.suggestiebalk fieldset:nth-child(4) div p:nth-child(3) {
+	margin-left: 11%;
+}
+
+.suggestiebalk fieldset:nth-child(4) div p:nth-child(4):after {
+	content: ' leestijden';
+}
+
+/*
+=================================
+	FILTEREN - SLIDER
+=================================
+*/
+
+.suggestiebalk fieldset:nth-child(4) input[type=range] {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 0.375rem;
+	background: #EEDAC8;
+	border-radius: 1rem;
+}
+
+.suggestiebalk fieldset:nth-child(4) input[type=range]:focus {
+	outline: none;
+}
+
+.suggestiebalk fieldset:nth-child(4) input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 0.375rem;
+	background: #EEDAC8;
+	border-radius: 1rem;
+	cursor: pointer;
+}
+
+.suggestiebalk fieldset:nth-child(4) input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 1.250rem;
+	width: 1.250rem;
+	background: #00D66C;
+	box-shadow: 0 0.25rem 0.25rem 0 rgba(0,214,107,0.20);
+	border-radius: 6.250rem;
+	cursor: pointer;
+	margin-top: -0.438rem;
+	transition: 300ms;
+}
+
+.suggestiebalk fieldset:nth-child(4) input[type=range]:hover::-webkit-slider-thumb, .suggestiebalk fieldset:nth-child(4) input[type=range]:focus::-webkit-slider-thumb {
+	background: #FF3268;
+	box-shadow: 0 0.25rem 0.25rem 0 rgba(255,49,104,0.20);
+}
+
+.suggestiebalk fieldset:nth-child(4) input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 0.375rem;
+	cursor: pointer;
+	background: #EEDAC8;
+	border-radius: 1rem;
+}
+
+.suggestiebalk fieldset:nth-child(4) input[type=range]::-moz-range-thumb {
+	height: 1.250rem;
+	width: 1.250rem;
+	background: #00D66C;
+	box-shadow: 0 0.25rem 0.25rem 0 rgba(0,214,107,0.20);
+	border-radius: 6.25rem;
+	cursor: pointer;
+	margin-top: -0.438rem;
+}
+
+.suggestiebalk fieldset:nth-child(4) input[type=range]:focus::-moz-range-thumb, .suggestiebalk fieldset:nth-child(4) input[type=range]:hover::-moz-range-thumb {
+	background: #FF3268;
+	box-shadow: 0 0.25rem 0.25rem 0 rgba(255,49,104,0.20);
+}
+
+.suggestiebalk fieldset:nth-child(4) input[type=range]::-ms-track {
+	width: 100%;
+	height: 0.375rem;
+	cursor: pointer;
+	background: #EEDAC8;
+	border-radius: 1rem;
+}
+
+.suggestiebalk fieldset:nth-child(4) input[type=range]::-ms-fill-lower {
+	background: #EEDAC8;
+}
+
+.suggestiebalk fieldset:nth-child(4) input[type=range]::-ms-fill-upper {
+	background: #FF3268;
+}
+
+.suggestiebalk fieldset:nth-child(4) input[type=range]::-ms-thumb {
+	height: 1.250rem;
+	width: 1.250rem;
+	background: #00D66C;
+	box-shadow: 0 0.25rem 0.25rem 0 rgba(0,214,107,0.20);
+	border-radius: 6.25rem;
+	cursor: pointer;
+	margin-top: -0.438rem;
+}
+
+.suggestiebalk fieldset:nth-child(4) input[type=range]:focus::-ms-thumb, .suggestiebalk fieldset:nth-child(4) input[type=range]:hover::-ms-thumb {
+	background: #FF3268;
+	box-shadow: 0 0.25rem 0.25rem 0 rgba(255,49,104,0.20);
+}
+
+/*
+=================================
+	MAIN
+=================================
+*/
+
+.mainhome, .mainaanmelden {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 60rem;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.mainhome > div:first-child {	
+	height: 2.750rem;
+	width: 11.125rem;
+	background: url(../images/uitgebreid_zoeken_pijl_omhoog_groen.svg) center no-repeat, url(../images/onderkant_suggestiebalk.svg) center 0 no-repeat;
+	left: 50%;
+	margin-left: -5.438rem;
+	position: absolute;
+	cursor: pointer;
+	transition: background 300ms;
+}
+
+.mainhome > div:first-child:hover {
+	background-position: center 40%;
+}
+
+.pijldraaien {
+	background: url(../images/uitgebreid_zoeken_pijl_omlaag_groen.svg) center no-repeat, url(../images/onderkant_suggestiebalk.svg) center 0 no-repeat !important;
+}
+
+.pijldraaien:hover {
+	background-position: center 60% !important;
+}
+
+.mainhome h3, .mainaanmelden h3 {
+	margin: 2.083333333333333rem 0 0.8333333333333333rem 0; /* 50/16 */ /* 20/16 */
+	width: 100%;
+}
+
+.mainhome > article:first-of-type {
+	margin-bottom: 0;
+	width: 100%;
+	display: flex;
+}
+
+.mainhome > article:first-of-type > div:first-child, .mainaanmelden > article:first-of-type > div:first-child {
+	align-items: stretch;
+	background: url(../images/alzheimer.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: auto;
+	width: 48%;
+	position: relative;
+}
+
+.mainhome > article:first-of-type > div:first-child > div {
+	width: 3.125rem;
+	height: 3.125rem;
+	position: absolute;
+	border-radius: 2rem;
+	box-shadow: 0 0.1em 0.1rem 0 rgba(0,214,107,0.40);
+	left: 100%;
+	top: 1.875rem;
+	margin-left: -1.5625rem;
+	background: url(../images/opslaan.svg) 55% 45% no-repeat #00D66C;
+	cursor: pointer;
+	z-index:1; /* Zodat de cursor overal een poitner is en niet alleen op de linker helft */
+}
+
+.mainhome article:first-of-type > div:nth-child(2) {
+	width: 52%;
+	padding-left: 4%;
+}
+
+.mainhome article:first-of-type h2 {
+	color: #FF3268;
+}
+
+.mainhome article, .mainaanmelden article, .mainaanmelden > article:first-of-type {
+	background: #FFFFFF;
+	border-radius: 0.188rem;
+	box-shadow: 0 0.188rem 0.125rem 0 rgba(0,0,0,0.15);
+	margin-bottom: 4%;
+	overflow: hidden;
+	width: 48%;
+}
+
+.mainhome article > div:first-child, .mainaanmelden article > div:first-child, .mainaanmelden article:first-of-type > div:first-child {
+	height: 9.375rem;
+	width: 100%;	
+	position: relative;
+}
+
+.mainhome article:nth-of-type(2) > div:first-child, .mainaanmelden article:nth-of-type(2) > div:first-child {
+	background: url(../images/blind.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.mainhome article:nth-of-type(3) > div:first-child {
+	background: url(../images/telegrafisch.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.mainhome article:nth-of-type(4) > div:first-child {
+	background: url(../images/verward.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.mainhome article:nth-of-type(5) > div:first-child {
+	background: url(../images/winter.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.mainhome article:nth-of-type(6) > div:first-child {
+	background: url(../images/roest.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.mainhome article:nth-of-type(7) > div:first-child {
+	background: url(../images/notitie.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.mainhome > article > div:first-child > div {
+	width: 3.125rem;
+	height: 3.125rem;
+	position: absolute;
+	border-radius: 2rem;
+	box-shadow: 0 0.1em 0.1em 0 rgba(0,214,107,0.40);
+	right: 1.875rem;
+	top: 7.8125rem;
+	background: url(../images/opslaan.svg) 55% 45% no-repeat #00D66C;
+	cursor: pointer;
+	z-index:1; /* Zodat de cursor overal een poitner is en niet alleen op de linker helft */
+}
+
+.verhaalopgeslagen {
+	background: url(../images/save_checked.svg) center no-repeat #00D66C !important;
+}
+
+.mainhome article > div:nth-child(2), .mainaanmelden article > div:nth-child(2) {
+	box-sizing: border-box;
+	flex-wrap: wrap;
+	padding: 1.875rem;
+	display: flex;
+	position: relative;
+}
+
+.mainhome article h2, .mainaanmelden article h2 {
+	color: #00D66C;
+	margin: 0 0 0.8rem 0;
+	width: 100%;
+}
+
+.mainhome article > div:nth-child(2) > div:nth-of-type(1), .mainaanmelden article > div:nth-child(2) > div:nth-of-type(1) {
+	background: url(../images/hart.svg);
+	background-position: 0 center;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	font-family: "nexa_regular";
+	font-size: 1.125em;
+	padding: 0.2rem 0 0 2rem;
+}
+
+.hartjeingelogd {
+	background: url(../images/hart_leeg.svg) !important;
+	background-position: 0 center !important;
+	background-repeat: no-repeat !important;
+	transition: 300ms;
+	cursor: pointer;
+}
+
+.hartjeGevuld {
+	background: url(../images/hart.svg) !important;
+	background-position: 0 center !important;
+	background-repeat: no-repeat !important;
+}
+
+.mainhome article > div:nth-child(2) > div:nth-of-type(2), .mainaanmelden article > div:nth-child(2) > div:nth-of-type(2) {
+	background: url(../images/kalender.svg);
+	background-position: 0 40%;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	font-family: "nexa_regular";
+	font-size: 1.125em;
+	padding: 0.2rem 0 0 2rem;
+	margin-left: 2.5rem;
+}
+
+.mainhome article button {
+	background: #FFFFFF;
+	border: 0.056rem solid #979797;
+	border-radius: 0.278rem;
+	box-shadow: inset 0 -0.167rem 0.111rem 0 rgba(0,0,0,0.2);
+	font-family: "nexa_bold";
+	font-size: 1.125em;
+	padding: 0.2rem 0.5rem;
+	outline: none;
+	transition: color 300ms;
+	cursor: pointer;
+}
+
+.mainhome article button:hover {
+	color: #2800A0;
+}
+
+.mainhome article button:focus {
+	box-shadow: 0 0 0.5rem 0.1rem #4990E2;
+}
+
+.mainhome article button:active {
+	background: #F7F7F7;
+	box-shadow: inset 0 0.125rem 0.125rem 0 rgba(0,0,0,0.2);
+}
+
+.mainaanmelden article button {
+	background: #E1E1E1;
+	color: rgba(0,0,0,0.3);
+	border: 0.063rem solid #979797;
+	border-radius: 0.278rem;
+	box-shadow: inset 0 0.125rem 0.125rem 0 rgba(0,0,0,0.2);
+	font-family: "nexa_bold";
+	font-size: 1.125em;
+	padding: 0.2rem 0.5rem;
+	outline: none;
+}
+
+.sorteren {
+	display: flex;
+	align-self: center;
+	width: 100%;
+	margin-top: -3.2rem;
+}
+
+.sorteren p {
+	margin: 0 1rem 0 auto;
+	font-size: 1.125em;
+}
+
+.sorteren select {
+	-webkit-appearance: none;
+	font-family: "nexa_bold";
+	font-size: 1.125rem;
+	height: 1.875rem;
+	background: #FFFFFF;
+	border: 0.063rem solid #979797;
+	border-radius: 0.313rem;
+	padding: 0 0.8rem;
+	margin-top: -0.3rem;
+}
+
+/*
+=================================
+	TELEGRAFISCH
+=================================
+*/
+
+.verhaalnavmobiel {
+	margin-top: 3.125rem;
+}
+
+.telegrafisch {
+	width: 100vw;
+	background: #FFFFFF;
+	padding: 6rem 0 3rem 0;
+}
+
+.telegrafisch > div:first-of-type {
+	max-width: 60rem;
+	margin: 0 auto;
+	width: 100%;
+	background: url(../images/telegrafisch_1.jpg);
+	background-position: center 0%;
+	background-repeat: no-repeat;
+	background-size: contain;
+    height: 58.500rem;
+}
+
+@media screen and (max-width: 60rem) {
+	.telegrafisch > div:first-of-type {
+		padding-top: 98%;
+		height: 0;
+	}
+}
+
+@media screen and (max-width: 46.875rem) {
+	.telegrafisch > div:first-of-type {
+		background: url(../images/telegrafisch_2.jpg);
+		background-position: center 0%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		padding-top: 125%;
+	}
+}
+
+@media screen and (max-width: 31.25rem) {
+	.telegrafisch > div:first-of-type {
+		background: url(../images/telegrafisch_3.jpg);
+		background-position: center 0%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		padding-top: 313%;
+	}
+}
+
+/*
+=================================
+	ALZHEIMER
+=================================
+*/
+
+.alzheimer {
+	width: 100vw;
+	background: #FFFFFF;
+	padding: 6rem 0 3rem 0;
+}
+
+.alzheimer > div:first-of-type {
+	max-width: 60rem;
+	margin: 0 auto;
+	width: 100%;
+	background: url(../images/alzheimer_1.jpg);
+	background-position: center 0%;
+	background-repeat: no-repeat;
+	background-size: contain;
+    height: 98.563rem;
+}
+
+@media screen and (max-width: 60rem) {
+	.alzheimer > div:first-of-type {
+		padding-top: 165%;
+		height: 0;
+	}
+}
+
+@media screen and (max-width: 46.875rem) {
+	.alzheimer > div:first-of-type {
+		background: url(../images/alzheimer_2.jpg);
+		background-position: center 0%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		padding-top: 199%;
+	}
+}
+
+@media screen and (max-width: 31.25rem) {
+	.alzheimer > div:first-of-type {
+		background: url(../images/alzheimer_3.jpg);
+		background-position: center 0%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		padding-top: 335%;
+	}
+}
+
+/*
+=================================
+	BLIND
+=================================
+*/
+
+.blind {
+	width: 100vw;
+	background: #FFFFFF;
+	padding: 6rem 0 0 0;
+}
+
+.blind > div:first-of-type {
+	max-width: 60rem;
+	margin: 0 auto;
+	width: 100%;
+	background: url(../images/blind_1.jpg);
+	background-position: center 0%;
+	background-repeat: no-repeat;
+	background-size: contain;
+    height: 190.188rem;
+}
+
+@media screen and (max-width: 60rem) {
+	.blind > div:first-of-type {
+		padding-top: 318%;
+		height: 0;
+	}
+}
+
+@media screen and (max-width: 46.875rem) {
+	.blind > div:first-of-type {
+		background: url(../images/blind_2.jpg);
+		background-position: center 0%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		padding-top: 531%;
+	}
+}
+
+@media screen and (max-width: 31.25rem) {
+	.blind > div:first-of-type {
+		background: url(../images/blind_3.jpg);
+		background-position: center 0%;
+		background-repeat: no-repeat;
+		background-size: contain;
+		padding-top: 830%;
+	}
+}
+
+/*
+=================================
+	OPSLAAN BEVESTIGING
+=================================
+*/
+
+.opslaanBevestiging {
+	height: 3.125rem;
+	width: 100vw;
+	background: #00D66C;
+	position: fixed;
+	bottom: -3.125rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: bottom 300ms;
+	z-index: 3;
+	display: none;
+}
+
+.opslaanBevestigingUitklappen {
+	bottom: 0 !important;
+}
+
+.opslaanBevestiging p {
+	font-family: "nexa_bold";
+	font-size: 1.25em;
+	color: #FFFFFF;
+	padding-top: 0.2rem;
+}
+
+.opslaanBevestiging p:before {
+	content: ' ';
+	float: left;
+	width: 1.250rem;
+	height: 1.250rem;
+	margin: 0.1rem 1rem 0 0;
+	background: url(../images/save_checked.svg) center no-repeat;
+}
+
+/*
+=================================
+	FOOTER
+=================================
+*/
+
+footer {
+	background: #F0F0F0;
+	color: #000000;
+	font-family: "nexa_regular";
+	font-size: 1em;
+	padding: 0.9375rem 0; /* 15/16 */
+	text-align: center;
+}
+
+
+/*
+=================================
+	BREAKPOINTS
+=================================
+*/
+
+@media screen and (max-width: 62.5rem) {
+
+	/*
+	=================================
+		PADDING
+	=================================
+	*/
+
+	.navhome > div:first-of-type {
+		padding: 0 2%;
+		box-sizing: border-box;
+	}
+	
+	.headerhome > div:first-child, .headeraanmelden > div:first-child {
+		padding: 0 2%;
+		box-sizing: border-box;
+	}
+
+	.suggestiebalk {
+		padding: 0 3%;
+		box-sizing: border-box;
+	}
+
+	main {
+		padding: 0 2%;
+		box-sizing: border-box;
+	}
+
+}
+
+@media screen and (max-width: 46.875rem) { /* Mobiel met hamburger menu */
+
+	/*
+	=================================
+		MAIN
+	=================================
+	*/
+
+	.mainhome > article:first-of-type > div:first-child, .mainaanmelden > article:first-of-type > div:first-child {
+		width: 30%;
+		height: auto;
+	}
+
+	.mainhome article:first-of-type > div:nth-child(2), .mainaanmelden article:first-of-type > div:nth-child(2) {
+		width: 70%;
+		padding-left: 6%;
+	}
+
+	.mainhome > article, .mainaanmelden article, .mainaanmelden article:first-of-type {
+		width: 100%;
+		display: flex;
+	}
+
+	.mainhome > article > div:first-child, .mainaanmelden > article > div:first-child {
+		height: auto;
+		width: 30%;
+	}
+
+	.mainhome > article > div:first-child > div, .mainaanmelden > article > div:first-child > div {
+		left: 100%;
+		top: 1.875rem;
+		margin-left: -1.5625rem;
+	}
+
+	.mainhome article > div:nth-child(2), .mainaanmelden article > div:nth-child(2) {
+		width: 70%;
+		padding-left: 6%;
+	}
+
+}
+
+@media screen and (max-width: 40.625rem) {
+
+	/*
+	=================================
+		NAV MOBIEL
+	=================================
+	*/
+
+	.navhome {
+		height: 3.125rem;
+	}
+
+	.navhome > div:first-of-type {
+		height: 3.125rem;
+		padding: 0;
+	}
+
+	.navhome > div:first-of-type > a, 	.navhome > div:first-of-type > ul  {
+		display: none;
+	}
+
+	.navhome > div:first-of-type > div:nth-of-type(1), .navhome > div:first-of-type > p, .navhome > div:first-of-type > div:nth-of-type(2) {
+		display: block;
+	}
+
+	/*
+	=================================
+		HEADER MOBIEL
+	=================================
+	*/
+
+	.headerhome {
+		height: auto;
+		background: none;
+		margin-top: 0;
+		position: fixed;
+		z-index: 3;
+	}
+
+	.headerhome > div:first-child {
+		padding: 0;
+	}
+
+	.headerhome h1, .headerhome p {
+		display: none;
+	}
+
+	#searchBar {
+		background: #F7F7F7;
+		border-radius: 0;
+		box-shadow: none;
+		height: 0;
+	}
+
+	#searchInput {
+		background: #F7F7F7;
+	}
+
+	#searchSubmit {
+		position: fixed;
+		margin: 0;
+		left: 2%;
+		width: 96%;
+		bottom: -4rem;
+		transition: bottom 200ms ;
+	}
+
+	.searchBarFocus {
+		box-shadow: none !important;
+	}
+
+	/*
+	=================================
+		FILTER MOBIEL
+	=================================
+	*/
+
+	.suggestiebalk {
+		height: 0.001rem;
+		position: fixed;
+		z-index: 2;
+		margin-top: 3.125rem;
+		max-height: none;
+		overflow-y: scroll;
+	}
+
+	.suggestiebalk form {
+		padding: 1rem 0 0 0;
+	}
+
+	.suggestiebalk fieldset:nth-child(1) {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+
+	.suggestiebalk fieldset:nth-child(2) {
+		width: 100%;
+		margin: 0 0 2rem 0;
+	}
+
+	.suggestiebalk fieldset:nth-child(3) {
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+
+	.suggestiebalk fieldset:nth-child(4) {
+		width: 100%;
+		margin: 0 0 11rem 0;
+	}
+
+	.suggestiebalk fieldset:nth-child(4) div p:nth-child(2) {
+		margin-left: 0;
+	}
+
+	.suggestiebalk fieldset:nth-child(4) div p:nth-child(3) {
+		margin-left: 0;
+	}
+
+	.suggestiebalk fieldset:nth-child(4) div p:nth-child(4):after {
+		content: '';
+	}
+
+	.suggestiebalk fieldset label:hover input[type="checkbox"] + span {
+	    background: #EEDAC8;
+	}
+
+	.suggestiebalk fieldset label:hover input[type="checkbox"]:checked + span {
+	    background: url("../images/checkbox_checked.svg") center no-repeat #EEDAC8;
+	}
+
+	/*
+	=================================
+		MAIN MOBIEL
+	=================================
+	*/
+
+	.mainhome {
+		margin-top: 3.125rem;
+	}
+
+	.mainhome > div:first-child {	
+		display: none;
+	}
+
+	.opslaanBevestiging {
+		display: flex;
+	}
+
+	/*
+	=================================
+		AANMELDEN - HEADER
+	=================================
+	*/
+
+	.headeraanmelden {
+		padding: 1rem 0;
+		margin-top: 3.125rem;
+	}
+
+	.headeraanmelden > div:first-child {
+		display: block;
+	}
+
+	.headeraanmelden > div:first-child form {
+		width: 100%;
+	}
+
+	.headeraanmelden > div:first-child form:nth-of-type(1) {
+		margin-bottom: 1rem;
+	}
+
+	.headeraanmelden > div:first-child form:nth-of-type(2) {
+		margin-left: 0;
+	}
+
+}
+
+@media screen and (max-width: 37.5rem) {
+
+	/*
+	=================================
+		MAIN
+	=================================
+	*/
+
+	.mainhome article, .mainhome article:first-of-type, .mainaanmelden article, .mainaanmelden article:first-of-type {
+		width: 100%;
+		display: block;
+	}
+
+	.mainhome article > div:first-child, .mainhome article:first-of-type > div:first-child, .mainaanmelden article > div:first-child, .mainaanmelden:first-of-type article > div:first-child {
+		height: 7rem;
+		width: 100%;
+		position: relative;
+	}
+
+	.mainhome > article > div:first-child > div, .mainhome > article:first-of-type > div:first-child > div {
+		left: auto;
+		top: 5.4375rem;
+	}
+
+	.mainhome article > div:nth-child(2), .mainhome article:first-of-type > div:nth-child(2), .mainaanmelden article > div:nth-child(2), .mainaanmelden article:first-of-type > div:nth-child(2) {
+		width: 100%;
+		padding: 1rem;
+	}
+
+	.sorteren {
+		margin: 0.5rem 0 1rem 0;
+	}
+
+	.sorteren p {
+		margin-left: 0;
+	}
+
+}

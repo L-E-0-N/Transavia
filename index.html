@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <title>Transavia Verhalen</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="icon" href="images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav class="navhome">
+        <div>
+            <a href="index.html">
+                <div>
+                    <!--Logo-->
+                </div>
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aanmelden.html">Aanmelden</a></li>
+            </ul>
+            <div>
+                <!--Hamburger Menu mobiel-->
+            </div>
+            <p>Home</p>
+            <div>
+                <!--Zoeken mobiel-->
+            </div>
+        </div>
+    </nav>
+    <div class="navmobielhome">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aanmelden.html">Aanmelden</a></li>
+        </ul>
+    </div>
+    <header class="headerhome">
+        <div>
+            <h1>Wat wil je lezen?</h1>
+            <form class="searchContainer">
+                <div id="searchBar">
+                    <div class="searchIcon"></div>
+                    <div id="searchQueryContainer">
+                    </div>
+                    <input type="search" name="zoekinput" placeholder="Zoeken.." id="searchInput" onkeyup="addTag()" onkeydown="tagQuickDelete()" onfocus="focusSearchInputStyle()" onfocusout="focusOutSearchInputStyle()" autofocus>
+                </div>
+                <button id="searchSubmit"></button>
+            </form>
+            <p class="uitgebreidzoeken">Uitgebreid zoeken</p>
+        </div>
+    </header>
+    <aside class="suggestiebalk">
+        <form>
+            <fieldset>
+                <legend>Genre</legend>
+                <label for="genrefictie">Fictie
+                    <input type="checkbox" name="genrefictie" id="genrefictie">
+                    <span></span>
+                </label>
+                <label for="genrenonfictie">Non-fictie
+                    <input type="checkbox" name="genrenonfictie" id="genrenonfictie">
+                    <span></span>
+                </label>
+                <label for="genrepolitiek">Politiek
+                    <input type="checkbox" name="genrepolitiek" id="genrepolitiek">
+                    <span></span>
+                </label>
+                <label for="genrereligie">Religie
+                    <input type="checkbox" name="genrereligie" id="genrereligie">
+                    <span></span>
+                </label>
+                <label for="genremedia">Media
+                    <input type="checkbox" name="genremedia" id="genremedia">
+                    <span></span>
+                </label>
+                <label for="genresport">Sport
+                    <input type="checkbox" name="genresport" id="genresport">
+                    <span></span>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Thema</legend>
+                <label for="themakeuzeredactie">Keuze redactie
+                    <input type="checkbox" name="themakeuzeredactie" id="themakeuzeredactie">
+                    <span></span>
+                </label>
+                <label for="themakerst">Kerst
+                    <input type="checkbox" name="themakerst" id="themakerst">
+                    <span></span>
+                </label>
+                <label for="themasinterklaas">Sinterklaas
+                    <input type="checkbox" name="themasinterklaas" id="themasinterklaas">
+                    <span></span>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Niveau</legend>
+                <label for="niveaukinderen">Kinderen
+                    <input type="checkbox" name="niveaukinderen" id="niveaukinderen">
+                    <span></span>
+                </label>
+                <label for="niveaujeugd">Jeugd
+                    <input type="checkbox" name="niveaujeugd" id="niveaujeugd">
+                    <span></span>
+                </label>
+                <label for="niveauvolwassenen">Volwassenen
+                    <input type="checkbox" name="niveauvolwassenen" id="niveauvolwassenen">
+                    <span></span>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Leestijd</legend>
+                <input type="range" name="tijd" value="3" min="0" max="3" oninput="sliderTag()">
+                <div>
+                    <!-- Div nodig aangezien justify-content: space-between niet werkt op de fieldset -->
+                    <p>
+                        < 5min</p>
+                            <p>
+                                < 10min</p>
+                                    <p>
+                                        < 15min</p>
+                                            <p>Alle</p>
+                </div>
+            </fieldset>
+        </form>
+    </aside>
+    <main class="mainhome">
+        <div>
+            <!--Onderkant Suggestiebalk-->
+        </div>
+        <h3>Keuze redactie</h3>
+        <article>
+            <div>
+                <!--Afb-->
+            </div>
+            <div>
+                <h2>Alzheimer</h2>
+                <div>84</div>
+                <div>12 juni 2016</div>
+                <p>Ik stap uit, euh… Hoe heet het? Zo’n vervoersdinges op wielen. Van de gemeente. Wit met blauw. Kom. Lijn 12. Of was het 21? Ik weet het niet. Ik stap uit</p>
+                <a href="alzheimer.html"><button>Lees meer</button></a>
+            </div>
+        </article>
+        <h3>Aanbevolen verhalen</h3>
+        <div class="sorteren">
+            <p>Sorteren op:</p>
+            <select>
+                <option selected>Relevantie</option>
+                <option>Populariteit</option>
+                <option>Datum</option>
+            </select>
+        </div>
+        <article>
+            <div>
+                <!--Afb-->
+            </div>
+            <div>
+                <h2>Blind</h2>
+                <div>102</div>
+                <div>10 juni 2016</div>
+                <p>Piepende remmen, bus 21 komt tot stilstand. De stem van de buschauffeur, naar mij gericht, zakelijk, niet vriendelijk, niet onvriendelijk: ‘Centraal Station,</p>
+                <a href="blind.html"><button>Lees meer</button></a>
+            </div>
+        </article>
+        <article>
+            <div>
+                <!--Afb-->
+            </div>
+            <div>
+                <h2>Telegrafisch</h2>
+                <div>38</div>
+                <div>13 juni 2016</div>
+                <p>BUS STOPT STOP NAAR BIBLIOTHEEK VOOR STIJLOEFENINGEN STOP VAN RAYMOND QUENEAU STOP REGEN EN WIND MENSEN IN</p>
+                <a href="telegrafisch.html"><button>Lees meer</button></a>
+            </div>
+        </article>
+        <article>
+            <div>
+                <!--Afb-->
+            </div>
+            <div>
+                <h2>De verwarde man</h2>
+                <div>58</div>
+                <div>7 juni 2016</div>
+                <p>De politie heeft dinsdag 2 februari een verwarde man aangehouden. Hij was op dat moment in een babywinkel op het Bos en Lommerplein bezig</p>
+                <button>Lees meer</button>
+            </div>
+        </article>
+        <article>
+            <div>
+                <!--Afb-->
+            </div>
+            <div>
+                <h2>Hongerwinter</h2>
+                <div>96</div>
+                <div>1 juli 2016</div>
+                <p>Mijn voeten en handen heb ik ingezwachteld tegen de kou. Kranten tegen m’n borst. Ik duw een handkar voort waarin mijn zoon vredig ligt te</p>
+                <button>Lees meer</button>
+            </div>
+        </article>
+        <article>
+            <div>
+                <!--Afb-->
+            </div>
+            <div>
+                <h2>Schoorsteen</h2>
+                <div>61</div>
+                <div>27 mei 2016</div>
+                <p>Ik stap de schoorsteen uit. Mijn schoorsteen is net in slaap gevallen. Ik ben op weg naar de Openbare Schoorsteen, in de hoop dat ze daar</p>
+                <button>Lees meer</button>
+            </div>
+        </article>
+        <article>
+            <div>
+                <!--Afb-->
+            </div>
+            <div>
+                <h2>Notitie</h2>
+                <div>44</div>
+                <div>11 juni 2016</div>
+                <p>Bus 21, rond het middaguur. Halte Centraal Station. Mijn zoon slaapt in zijn kinderwagen. Ik loop langs de winderige bouwputten naar de Openbare</p>
+                <button>Lees meer</button>
+            </div>
+        </article>
+    </main>
+    <div class="opslaanBevestiging">
+        <p>Verhaal opgeslagen</p>
+    </div>
+    <footer>
+        © Transavia Verhalen - 2016
+    </footer>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+</body>
+
+</html>

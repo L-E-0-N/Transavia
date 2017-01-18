@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="20px" viewBox="0 0 24 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0.000197,6.616576 C0.040199,13.03897 6.00197,17.754548 11.481314,19.960952 C11.523264,19.977823 11.566499,19.986072 11.607952,20 C11.649405,19.986072 11.693428,19.977823 11.735378,19.960952 C17.214764,17.754548 23.17612,13.03897 23.21608,6.616576 C23.262176,-0.78634 15.214338,-2.247009 11.607952,3.607317 C8.001566,-2.247009 -0.045898,-0.78634 0.000197,6.616576 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23.2162774" height="20.0000002" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="hart" stroke-width="4" stroke="#FF3268">
+            <g id="Page-1">
+                <g id="Desktop-HD-4.0">
+                    <g id="Main">
+                        <g id="Artikel">
+                            <g id="Details">
+                                <use id="Fill-1" mask="url(#mask-2)" xlink:href="#path-1"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
